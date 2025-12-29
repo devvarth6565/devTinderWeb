@@ -1,11 +1,22 @@
-import { Button } from "@/components/ui/button"
+import Body from "./Body";
+import NavBar from "./NaveBar"
+import { BrowserRouter, Routes, Route } from "react-router";
 
 export default function App() {
   return (
-    <div className="p-10 flex gap-4">
-      <Button>Default</Button>
-      <Button variant="destructive">Destructive</Button>
-      <Button variant="outline">Outline</Button>
-    </div>
+ <>
+  <BrowserRouter>
+    <Routes>
+    <Route path="/" element={<Body/>}>
+
+      <Route path="/login" element={<div>login Page</div>} />
+
+
+      </Route>
+    </Routes>
+  </BrowserRouter>
+
+
+ </>
   )
 }
