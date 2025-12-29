@@ -1,12 +1,11 @@
-import { useState } from 'react'
+import { Button } from "@/components/ui/button"
 
-
-
-
-function App() {
-  return(
-    <h1>hellow</h1>
+export default function App() {
+  return (
+    <div className="p-10 flex gap-4">
+      <Button>Default</Button>
+      <Button variant="destructive">Destructive</Button>
+      <Button variant="outline">Outline</Button>
+    </div>
   )
 }
-
-export default App
