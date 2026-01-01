@@ -1,5 +1,7 @@
 import Body from "./Body";
-import NavBar from "./NaveBar"
+import Login from "./Login";
+import SignUp from "./SignUp";
+
 import { BrowserRouter, Routes, Route } from "react-router";
 
 export default function App() {
@@ -9,7 +11,9 @@ export default function App() {
     <Routes>
     <Route path="/" element={<Body/>}>
 
-      <Route path="/login" element={<div>login Page</div>} />
+      <Route path="/login" element={<Login/>} />
+      <Route path="/signup" element={<SignUp/>} />
+
 
 
       </Route>
