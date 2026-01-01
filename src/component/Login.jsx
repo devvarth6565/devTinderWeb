@@ -1,18 +1,28 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useDispatch } from "react-redux";
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
 import axios from "axios";
+import { addUser } from "../utils/userSlice";
+import { useNavigate } from "react-router";
+import { BASE_URL } from "../utils/constants";
 
 const Login = () => {
+    const dispatch = useDispatch();
+    const Navigate = useNavigate();
+
     const [email, setEmail] = useState("papa@gmail.com");
     const [password, setPassword] = useState("Papapapa$$1");
 
 
     const handleLogin = async ()=>{
         try{
-            const res = await axios.post("http://localhost:3000/login",{email,password},{withCredentials:true})
+            const res = await axios.post(BASE_URL+"/login",{email,password},{withCredentials:true})
+            dispatch(addUser(res.data))
+            return Navigate("/feed")
         }catch(error){
             console.log(error);
 

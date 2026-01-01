@@ -4,15 +4,26 @@ import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import axios from "axios";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
+import { useNavigate } from "react-router";
+import { BASE_URL } from "../utils/constants";
+
+
 
 const SignUp = () => {
         const [firstName, setFirstName] = useState("");
         const [lastName, setLastName] = useState("");
         const [email, setEmail] = useState("");
         const [password, setPassword] = useState("");
+        const dispatch = useDispatch();
+        const Navigate = useNavigate();
 
         const handleSignUp = async () => {
-            const res = await axios.post("http://localhost:3000/signup", {firstName,lastName,email,password},{withCredentials:true})
+            const res = await axios.post(BASE_URL+"/signup", {firstName,lastName,email,password},{withCredentials:true})
+
+            dispatch(addUser(res.data))
+            return Navigate("/feed")
     
         }
     return (

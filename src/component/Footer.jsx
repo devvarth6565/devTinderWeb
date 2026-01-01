@@ -54,7 +54,7 @@ const Footer = () => {
                             <span className="text-xl">📧</span>
                         </a>
                         <a href="#" className="text-gray-600 hover:text-primary transition">
-                            <span className="text-xl">🐙</span>
+                            <span className="text-xl">🐙</span>  
                         </a>
                     </div>
                 </div>
