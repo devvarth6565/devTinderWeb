@@ -35,7 +35,7 @@ const NavBar = () => {
         <nav className="flex items-center justify-between px-6 py-4 border-b bg-[#FFFFF0]">
             <div 
                 className="text-2xl font-bold text-primary cursor-pointer" 
-                onClick={() => navigate("/")}
+                onClick={() => navigate("/feed")}
             >
                 DevTinder 
             </div>
@@ -45,7 +45,7 @@ const NavBar = () => {
                 {user ? (
                     <div className="flex items-center gap-4">
                         {/* Profile Picture Component */}
-                        <Avatar className="cursor-pointer">
+                        <Avatar className="cursor-pointer" onClick={() => navigate("/profile")}>
                             <AvatarImage src={user.photoUrl} alt={user.firstName} />
                             <AvatarFallback>
                                 {user.firstName ? user.firstName[0] : "U"}

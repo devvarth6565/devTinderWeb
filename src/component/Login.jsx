@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom"; // Change 'react-router' to 'react-router-dom'
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { useState } from "react";
@@ -85,10 +86,10 @@ const Login = () => {
                 <CardFooter className="flex flex-col space-y-4">
                     <Button className="w-full" onClick={handleLogin}>Login</Button>
                     <p className="text-sm text-center text-gray-600">
-                        Don't have an account?{" "}
-                        <a href="/signup" className="text-primary font-semibold hover:underline">
-                            Sign up
-                        </a>
+                Don't have an account?{" "}
+                <Link to="/signup" className="text-primary font-semibold hover:underline">
+                     Sign up
+                        </Link>
                     </p>
                 </CardFooter>
             </Card>

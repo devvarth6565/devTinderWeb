@@ -6,7 +6,7 @@ import axios from "axios";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { BASE_URL } from "../utils/constants";
 
 
@@ -119,9 +119,9 @@ const SignUp = () => {
                     <Button className="w-full" onClick={handleSignUp}>Create Account</Button>
                     <p className="text-sm text-center text-gray-600">
                         Already have an account?{" "}
-                        <a href="/login" className="text-primary font-semibold hover:underline">
+                        <Link to="/login" className="text-primary font-semibold hover:underline">
                             Login
-                        </a>
+                        </Link>
                     </p>
                 </CardFooter>
             </Card>
