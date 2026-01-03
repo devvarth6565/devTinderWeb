@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { addUser } from "@/utils/userSlice";
 import axios from "axios";
 import appStore from "@/utils/appStore";
+import { Toaster } from "sonner";
 
 
 const Body = ()=>{
@@ -43,6 +44,8 @@ const Body = ()=>{
     
     <>
         <NavBar/>
+        <Toaster richColors position="top-center"/>
+
         <Outlet/>
         <Footer/>
         </>
