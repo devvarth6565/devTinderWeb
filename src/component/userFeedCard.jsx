@@ -4,13 +4,13 @@ import { X, Heart } from "lucide-react";
 import { toast } from "sonner"; // <--- 1. Import toast
 
 const UserFeedCard = ({ user }) => {
-    // Safety check: if user is null (e.g. end of feed), don't crash
+
     if (!user) return null;
 
     const { firstName, lastName, age, photoUrl, bio, skills } = user;
 
     const handleIgnore = () => {
-        // 2. Trigger "Info" or "Error" style toast for Ignore
+
         toast("Passed", {
             description: `You passed on ${firstName}.`,
             action: {
@@ -25,7 +25,7 @@ const UserFeedCard = ({ user }) => {
 
         toast.success("Interested", {
             description: `You liked ${firstName}!`,
-            duration: 3000, // Stays for 3 seconds
+            duration: 3000, 
         });
 
     };

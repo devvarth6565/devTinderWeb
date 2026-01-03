@@ -8,6 +8,7 @@ import Feed from "./component/Feed";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import  appStore  from "./utils/appStore";
 import Profile from "./component/profile";
+import Connection from "./component/Connection";
 
 export default function App() {
   return (
@@ -18,6 +19,10 @@ export default function App() {
     <Route path="/" element={<Body/>}>
     <Route path="/feed" element={<Feed/>} />
     <Route path="/profile" element={<Profile />} />
+    <Route path="/requests" element={<Connection />} />
+    <Route path="/connections" element={<Connection />} />
+
+
     
      
 
