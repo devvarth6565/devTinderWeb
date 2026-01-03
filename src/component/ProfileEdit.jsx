@@ -150,7 +150,7 @@ toast.success("Profile Updated Successfully", {
                                         id="bio"
                                         value={formData.bio}
                                         onChange={(e) => handleInputChange("bio", e.target.value)}
-                                        className="bg-white border-gray-300 min-h-[120px]"
+                                        className="bg-white border-gray-300 min-h-30"
                                         placeholder="Tell us about yourself..."
                                     />
                                 </div>

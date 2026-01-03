@@ -61,7 +61,7 @@ const NavBar = () => {
                         </div>
 
                         {/* Divider */}
-                        <div className="h-6 w-[1px] bg-gray-300 hidden md:block"></div>
+                        <div className="h-6 w-px bg-gray-300 hidden md:block"></div>
 
                         {/* Profile Section */}
                         <div className="flex items-center gap-3">

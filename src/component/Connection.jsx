@@ -63,7 +63,7 @@ const Connection = () => {
                                 className="group flex items-center p-4 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md hover:border-primary/20 transition-all cursor-pointer"
                             >
                                 {/* Left: Avatar */}
-                                <div className="flex-shrink-0 mr-4">
+                                <div className="shrink-0 mr-4">
                                     <img 
                                         src={connection.photoUrl || "https://placehold.co/100"} 
                                         alt={connection.firstName}
@@ -127,7 +127,7 @@ const Connection = () => {
                     {selectedConnection && (
                         <div>
                             {/* Header Image Background */}
-                            <div className="relative h-32 bg-gradient-to-r from-primary/20 to-primary/5">
+                            <div className="relative h-32 bg-linear-to-r from-primary/20 to-primary/5">
                                 <div className="absolute -bottom-10 left-6">
                                     <img 
                                         src={selectedConnection.photoUrl || "https://placehold.co/600"} 

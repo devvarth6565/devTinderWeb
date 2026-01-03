@@ -115,7 +115,7 @@ const Request = () => {
                                     <CardContent className="p-0">
                                         <div className="flex flex-col md:flex-row gap-4 p-6">
                                             {/* Profile Picture */}
-                                            <div className="flex-shrink-0">
+                                            <div className="shrink-0">
                                                 <div className="w-24 h-24 rounded-full overflow-hidden bg-gray-200 border-2 border-white shadow-sm">
                                                     <img 
                                                         src={user.photoUrl || "https://placehold.co/400"} 
@@ -127,7 +127,7 @@ const Request = () => {
                                             </div>
 
                                             {/* User Info */}
-                                            <div className="flex-grow space-y-2">
+                                            <div className="grow space-y-2">
                                                 <div>
                                                     <h3 className="text-xl font-bold text-gray-800 capitalize">
                                                         {user.firstName} {user.lastName}
@@ -162,7 +162,7 @@ const Request = () => {
                                             </div>
 
                                             {/* Action Buttons */}
-                                            <div className="flex md:flex-col gap-3 md:justify-center min-w-[120px]">
+                                            <div className="flex md:flex-col gap-3 md:justify-center min-w-30">
                                                 <Button
                                                     size="sm"
                                                     className="flex-1 md:flex-none bg-green-600 hover:bg-green-700 text-white"
