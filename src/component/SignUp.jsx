@@ -23,7 +23,7 @@ const SignUp = () => {
             const res = await axios.post(BASE_URL+"/signup", {firstName,lastName,email,password},{withCredentials:true})
 
             dispatch(addUser(res.data))
-            return Navigate("/feed")
+            return Navigate("/profile")
     
         }
     return (

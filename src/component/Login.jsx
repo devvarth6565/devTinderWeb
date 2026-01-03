@@ -29,7 +29,7 @@ const Login = () => {
             const res = await axios.post(BASE_URL + "/login", { email, password }, { withCredentials: true });
             dispatch(addUser(res.data));
             toast.success("Login Successful");
-            return navigate("/feed");
+            return navigate("/profile");
         } catch (error) {
             console.log(error);
             toast.error("Login Failed", { description: error.response?.data || "Invalid credentials" });
