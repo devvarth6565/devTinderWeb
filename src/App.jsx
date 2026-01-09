@@ -7,7 +7,7 @@ import Feed from "./component/Feed";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import  appStore  from "./utils/appStore";
-import Profile from "./component/profile";
+import Profile from "./component/Profile";
 import Connection from "./component/Connection";
 import Request from "./component/Request";
 
